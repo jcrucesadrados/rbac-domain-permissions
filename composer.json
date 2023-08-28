@@ -1,0 +1,33 @@
+{
+    "name": "getorbit/rbac-domain-permissions",
+    "autoload": {
+        "psr-4": {
+            "Getorbit\\RbacDomainPermissions\\": "src/",
+            "Getorbit\\RbacDomainPermissions\\Tests": "tests/"
+        }
+    },
+    "description": "This is a custom package to manage permissions in the Orbit System based on a RBAC with domain system",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "role": "Developer",
+            "name": "Joaquín Cruces",
+            "email": "joaquin@getorbit.com",
+            "homepage": "https://https://github.com/jcrucesadrados"
+        },
+        {
+            "role": "Developer",
+            "name": "Jorge Delgado",
+            "email": "jorge@getorbit.com",
+            "homepage": "https://github.com/jordelca"
+        },
+        {
+            "role": "Developer",
+            "name": "Pedro Nofuentes",
+            "email": "pedro@getorbit.com",
+            "homepage": "https://github.com/pedronofuentes"
+        }
+    ],
+    "require": {}
+}
