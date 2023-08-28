@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+composer unit-test
+composer php-stan
