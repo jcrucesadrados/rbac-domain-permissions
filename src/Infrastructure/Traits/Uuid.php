@@ -18,6 +18,11 @@ trait Uuid
         return new self($uuid);
     }
 
+    public function asString(): string
+    {
+        return $this->uuid;
+    }
+
     private static function guardValidUuid(string $uuid): void
     {
         if (! UuidLib::isValid($uuid)) {
