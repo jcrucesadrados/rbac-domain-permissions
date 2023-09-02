@@ -49,6 +49,30 @@
         "full-test-suite": "vendor/bin/phpunit",
         "pint": "./vendor/bin/pint --config pint.json --dirty",
         "copy-hooks": "cp scripts/hooks/pre-commit .git/hooks && cp scripts/hooks/pre-push .git/hooks",
-        "post-autoload-dump": "@copy-hooks"
+        "post-autoload-dump": [
+            "@clear",
+            "@prepare",
+            "@copy-hooks"
+        ],
+        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "prepare": "@php vendor/bin/testbench package:discover --ansi",
+        "build": "@php vendor/bin/testbench workbench:build --ansi",
+        "serve": [
+            "@build",
+            "@php vendor/bin/testbench serve"
+        ],
+        "lint": [
+            "@prepare",
+            "@php vendor/bin/pint",
+            "@php vendor/bin/phpstan analyse"
+        ],
+        "test": "@php vendor/bin/phpunit"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+        }
     }
 }

@@ -3,6 +3,8 @@
 namespace Getorbit\RbacDomainPermissions\Tests\Traits;
 
 use Getorbit\RbacDomainPermissions\Domain\Entities\PermissionsObject;
+use Getorbit\RbacDomainPermissions\Domain\Exceptions\InvalidAllowedAction;
+use Getorbit\RbacDomainPermissions\Domain\ValueObjects\PermissionsObjectList;
 
 trait ObjectsSetupTrait
 {
@@ -22,16 +24,16 @@ trait ObjectsSetupTrait
         ]);
     }
 
-    /*
-
+    /**
+     * @throws InvalidAllowedAction
+     */
     private function getValidPermissionsObjectList(): PermissionsObjectList
     {
-        return PermissionsObjectList::fromArray(ObjectsPermissionsStub::getObjects());
+        return PermissionsObjectList::fromArray(ObjectsPermissionsStub::getPermissionsObjects());
     }
 
     private function getRawObjects(): array
     {
-        return ObjectsPermissionsStub::getObjects();
+        return ObjectsPermissionsStub::getPermissionsObjects();
     }
-    */
 }

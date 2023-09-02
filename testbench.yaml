@@ -1,0 +1,2 @@
+providers:
+  - Getorbit\RbacDomainPermissions\Infrastructure\RbacDomainPermissionsServiceProvider
