@@ -31,8 +31,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "casbin/laravel-authz": "^3.1",
-        "laravel/laravel": "^10.2"
+        "casbin/laravel-authz": "^3.1"
     },
     "require-dev": {
         "orchestra/testbench": "^8.9",
