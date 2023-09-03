@@ -1,3 +1,4 @@
+[![Full test suite](https://github.com/jcrucesadrados/rbac-domain-permissions/actions/workflows/full-tests-suite.yml/badge.svg)](https://github.com/jcrucesadrados/rbac-domain-permissions/actions/workflows/full-tests-suite.yml)
 # 🧙️ Orbit RBAC with domain permissions system
 Orbit Permissions is a Laravel package that allows managing permissions according to the Role Based Access Control rules, adding an extra capability to constrain the permissions to a given domain.
 
