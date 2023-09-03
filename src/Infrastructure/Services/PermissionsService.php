@@ -11,6 +11,7 @@ use Getorbit\RbacDomainPermissions\Domain\Exceptions\RoleNotFound;
 use Getorbit\RbacDomainPermissions\Domain\Exceptions\UserHasNotRoleForDomain;
 use Getorbit\RbacDomainPermissions\Domain\Repositories\ObjectsQueryRepository;
 use Getorbit\RbacDomainPermissions\Domain\Repositories\RolesRepositoryInterface;
+use Getorbit\RbacDomainPermissions\Domain\Repositories\UserRolesRepositoryInterface;
 use Getorbit\RbacDomainPermissions\Domain\Services\PermissionsCheckerInterface;
 use Getorbit\RbacDomainPermissions\Domain\ValueObjects\Action;
 use Getorbit\RbacDomainPermissions\Domain\ValueObjects\PermissionsPolicy;

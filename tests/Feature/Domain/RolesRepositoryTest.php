@@ -1,5 +1,7 @@
 <?php
 
+namespace Getorbit\RbacDomainPermissions\Tests\Feature\Domain;
+
 use Getorbit\RbacDomainPermissions\Domain\Aggregates\Role;
 use Getorbit\RbacDomainPermissions\Domain\Exceptions\RoleAlreadyExists;
 use Getorbit\RbacDomainPermissions\Domain\Exceptions\RoleMustHaveAtLeastOnePolicy;

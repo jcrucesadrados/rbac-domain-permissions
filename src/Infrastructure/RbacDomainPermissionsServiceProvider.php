@@ -4,9 +4,11 @@ namespace Getorbit\RbacDomainPermissions\Infrastructure;
 
 use Getorbit\RbacDomainPermissions\Domain\Repositories\ObjectsQueryRepository;
 use Getorbit\RbacDomainPermissions\Domain\Repositories\RolesRepositoryInterface;
+use Getorbit\RbacDomainPermissions\Domain\Repositories\UserRolesRepositoryInterface;
 use Getorbit\RbacDomainPermissions\Domain\Services\PermissionsCheckerInterface;
 use Getorbit\RbacDomainPermissions\Infrastructure\Repositories\ConstantsObjectsQueryRepository;
 use Getorbit\RbacDomainPermissions\Infrastructure\Repositories\RolesRepository;
+use Getorbit\RbacDomainPermissions\Infrastructure\Repositories\UserRolesRepository;
 use Getorbit\RbacDomainPermissions\Infrastructure\Services\PermissionsChecker;
 use Getorbit\RbacDomainPermissions\Tests\Traits\ObjectsPermissionsStub;
 use Illuminate\Support\Facades\Config;
@@ -18,6 +20,7 @@ class RbacDomainPermissionsServiceProvider extends ServiceProvider
         ObjectsQueryRepository::class => ConstantsObjectsQueryRepository::class,
         PermissionsCheckerInterface::class => PermissionsChecker::class,
         RolesRepositoryInterface::class => RolesRepository::class,
+        UserRolesRepositoryInterface::class => UserRolesRepository::class,
     ];
 
     public function register()
