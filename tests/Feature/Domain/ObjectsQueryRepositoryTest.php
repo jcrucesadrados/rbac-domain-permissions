@@ -1,5 +1,7 @@
 <?php
 
+namespace Getorbit\RbacDomainPermissions\Tests\Feature\Domain;
+
 use Getorbit\RbacDomainPermissions\Domain\Entities\PermissionsObject;
 use Getorbit\RbacDomainPermissions\Domain\Exceptions\ObjectNotFound;
 use Getorbit\RbacDomainPermissions\Domain\Repositories\ObjectsQueryRepository;

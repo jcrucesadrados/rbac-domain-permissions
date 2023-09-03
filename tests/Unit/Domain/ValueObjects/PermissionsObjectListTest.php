@@ -1,6 +1,6 @@
 <?php
 
-namespace Getorbit\RbacDomainPermissions\Tests\Domain\ValueObjects;
+namespace Getorbit\RbacDomainPermissions\Tests\Unit\Domain\ValueObjects;
 
 use Getorbit\RbacDomainPermissions\Domain\Entities\PermissionsObject;
 use Getorbit\RbacDomainPermissions\Domain\Exceptions\ObjectNotFound;

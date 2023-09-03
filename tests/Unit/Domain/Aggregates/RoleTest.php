@@ -1,6 +1,6 @@
 <?php
 
-namespace Getorbit\RbacDomainPermissions\Tests\Domain\Aggregates;
+namespace Getorbit\RbacDomainPermissions\Tests\Unit\Domain\Aggregates;
 
 use Getorbit\RbacDomainPermissions\Domain\Aggregates\Role;
 use Getorbit\RbacDomainPermissions\Domain\Exceptions\PolicyAlreadyExistsForRole;

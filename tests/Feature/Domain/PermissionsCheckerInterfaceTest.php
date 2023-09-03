@@ -1,5 +1,7 @@
 <?php
 
+namespace Getorbit\RbacDomainPermissions\Tests\Feature\Domain;
+
 use Getorbit\RbacDomainPermissions\Domain\Entities\User;
 use Getorbit\RbacDomainPermissions\Domain\Exceptions\InvalidActionForObject;
 use Getorbit\RbacDomainPermissions\Domain\Services\PermissionsCheckerInterface;

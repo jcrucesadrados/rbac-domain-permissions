@@ -1,6 +1,6 @@
 <?php
 
-namespace Getorbit\RbacDomainPermissions\Tests\Domain\ValueObjects\RoleDomain;
+namespace Getorbit\RbacDomainPermissions\Tests\Unit\Domain\ValueObjects\RoleDomain;
 
 use Getorbit\RbacDomainPermissions\Domain\ValueObjects\RoleDomain\RoleDomain;
 use Getorbit\RbacDomainPermissions\Tests\Stubs\RoleDomainStub;
