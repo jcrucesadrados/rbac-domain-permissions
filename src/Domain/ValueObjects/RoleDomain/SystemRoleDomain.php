@@ -11,7 +11,7 @@ class SystemRoleDomain extends RoleDomain
         parent::__construct(self::KEY, $id);
     }
 
-    public static function fromId(string $id): self
+    public static function fromId(string | int $id): self
     {
         return new self($id);
     }

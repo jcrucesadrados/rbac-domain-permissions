@@ -43,7 +43,7 @@
         "laravel/pint": "^1.11"
     },
     "scripts": {
-        "php-stan": "vendor/bin/phpstan analyse",
+        "php-stan": "vendor/bin/phpstan analyse --memory-limit=1G",
         "unit-test": "vendor/bin/phpunit --testsuite=Unit",
         "integration-test": "vendor/bin/phpunit --testsuite=Integration",
         "full-test-suite": "vendor/bin/phpunit",
@@ -53,18 +53,6 @@
             "@clear",
             "@prepare",
             "@copy-hooks"
-        ],
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
-        "prepare": "@php vendor/bin/testbench package:discover --ansi",
-        "build": "@php vendor/bin/testbench workbench:build --ansi",
-        "serve": [
-            "@build",
-            "@php vendor/bin/testbench serve"
-        ],
-        "lint": [
-            "@prepare",
-            "@php vendor/bin/pint",
-            "@php vendor/bin/phpstan analyse"
         ],
         "test": "@php vendor/bin/phpunit"
     },

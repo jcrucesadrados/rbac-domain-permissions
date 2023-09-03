@@ -48,7 +48,7 @@ class RoleDomainTest extends TestCase
      * @test
      * @dataProvider provideInvalidCases
      */
-    public function fromStringThrowsErrorWhenInvalidArgument($role): void
+    public function fromStringThrowsErrorWhenInvalidArgument(string $role): void
     {
         $this->expectException(InvalidArgumentException::class);
         RoleDomainStub::fromString($role);

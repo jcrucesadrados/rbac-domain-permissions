@@ -122,7 +122,7 @@ class PermissionsService
         string $userId,
         string $role,
         string $context,
-        string $domain,
+        string | int $domain,
     ): void {
         $roleDomain = self::getRoleDomain($context, $domain);
 
@@ -141,7 +141,7 @@ class PermissionsService
         string $userId,
         string $role,
         string $context,
-        string $domain,
+        string | int $domain,
     ): void {
         $roleDomain = self::getRoleDomain($context, $domain);
 
@@ -239,7 +239,7 @@ class PermissionsService
     {
         $context = DomainContext::from($context);
 
-        /** @var $domainRoleClass RoleDomain */
+        /** @var RoleDomain $domainRoleClass */
         $domainRoleClass = $context->getRoleDomainClass();
 
         return $domainRoleClass::fromId($domain);

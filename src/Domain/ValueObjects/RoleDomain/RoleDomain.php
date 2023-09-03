@@ -76,7 +76,7 @@ abstract class RoleDomain implements RoleDomainInterface
         return $this->id;
     }
 
-    abstract public static function fromId(string $id): self;
+    abstract public static function fromId(string | int $id): self;
 
     abstract public static function context(): DomainContext;
 }

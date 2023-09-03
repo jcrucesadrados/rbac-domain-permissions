@@ -28,8 +28,9 @@ final readonly class UserPermission
     {
         self::checkKeysExists(self::REQUIRED_ATTRIBUTES, $userPermission);
 
-        /** @var RoleDomain $domainClass */
         $context = RoleDomain::getContext($userPermission['domain']);
+
+        /** @var RoleDomain $domainClass */
         $domainClass = $context->getRoleDomainClass();
 
         return new self(

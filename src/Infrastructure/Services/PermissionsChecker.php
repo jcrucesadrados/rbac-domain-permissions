@@ -21,6 +21,7 @@ class PermissionsChecker implements PermissionsCheckerInterface
             throw new InvalidActionForObject();
         }
 
+        /** @phpstan-ignore-next-line */
         return Enforcer::enforce($user->userId->asString(), $domain->asString(), $object->key, $action->value);
     }
 }

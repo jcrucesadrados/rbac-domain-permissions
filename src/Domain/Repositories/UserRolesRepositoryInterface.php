@@ -17,6 +17,8 @@ interface UserRolesRepositoryInterface
 
     public function getDomainsForUserContext(User $user, string $key, callable $callback): array;
 
+    public function getUsersForRole(Role $role): array;
+
     /**
      * @throws UserHasNotRoleForDomain
      */

@@ -19,8 +19,6 @@ class PermissionsObject
     }
 
     /**
-     * @param array $object
-     * @return static
      * @throws InvalidArgumentException | InvalidAllowedAction
      */
     public static function fromArray(array $object): self
