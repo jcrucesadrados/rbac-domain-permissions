@@ -3,6 +3,7 @@
 namespace Getorbit\RbacDomainPermissions\Tests\Stubs;
 
 use Getorbit\RbacDomainPermissions\Domain\ValueObjects\RoleDomain\DomainContext;
+use Getorbit\RbacDomainPermissions\Domain\ValueObjects\RoleDomain\DomainId;
 use Getorbit\RbacDomainPermissions\Domain\ValueObjects\RoleDomain\RoleDomain;
 
 class RoleDomainStub extends RoleDomain
@@ -22,5 +23,10 @@ class RoleDomainStub extends RoleDomain
     public static function context(): DomainContext
     {
         return DomainContext::from(self::KEY);
+    }
+
+    public function getId(): DomainId
+    {
+        return $this->id;
     }
 }

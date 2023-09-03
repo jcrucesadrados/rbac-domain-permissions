@@ -23,6 +23,11 @@ trait Uuid
         return $this->uuid;
     }
 
+    public function __toString(): string
+    {
+        return $this->asString();
+    }
+
     private static function guardValidUuid(string $uuid): void
     {
         if (! UuidLib::isValid($uuid)) {

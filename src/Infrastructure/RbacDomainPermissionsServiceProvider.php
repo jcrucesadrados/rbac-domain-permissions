@@ -10,6 +10,7 @@ use Getorbit\RbacDomainPermissions\Infrastructure\Repositories\ConstantsObjectsQ
 use Getorbit\RbacDomainPermissions\Infrastructure\Repositories\RolesRepository;
 use Getorbit\RbacDomainPermissions\Infrastructure\Repositories\UserRolesRepository;
 use Getorbit\RbacDomainPermissions\Infrastructure\Services\PermissionsChecker;
+use Getorbit\RbacDomainPermissions\Infrastructure\Services\PermissionsService;
 use Getorbit\RbacDomainPermissions\Tests\Traits\ObjectsPermissionsStub;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
@@ -29,6 +30,14 @@ class RbacDomainPermissionsServiceProvider extends ServiceProvider
             ->needs('$objectsClasses')
             ->give($this->getObjects());
 
+        $this->app->bind('Permissions', function () {
+            return PermissionsService::make(
+                resolve(ObjectsQueryRepository::class),
+                resolve(PermissionsCheckerInterface::class),
+                resolve(RolesRepositoryInterface::class),
+                resolve(UserRolesRepositoryInterface::class),
+            );
+        });
     }
 
     private function getObjects(): array
