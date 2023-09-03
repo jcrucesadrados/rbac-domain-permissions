@@ -11,3 +11,7 @@ parameters:
     level: 6
 
     checkMissingIterableValueType: false
+
+    excludePaths:
+        - **/*/Migrations/*
+        - **/*/migrations/*
