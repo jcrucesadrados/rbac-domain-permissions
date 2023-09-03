@@ -32,4 +32,5 @@ jobs:
       - name: Execute tests (Unit and Feature tests) via Composer
         run:
           composer test
-          composer php-stan
+      - name: Execute PHPStan
+        run: composer php-stan
