@@ -13,5 +13,5 @@ parameters:
     checkMissingIterableValueType: false
 
     excludePaths:
-            - **/*/Migrations/*
-            - **/*/migrations/*
+        - **/*/Migrations/*
+        - **/*/migrations/*
