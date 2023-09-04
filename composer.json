@@ -69,7 +69,10 @@
             ],
             "aliases": {
                 "PermissionsFacade": "Getorbit\\RbacDomainPermissions\\Infrastructure\\Facades\\PermissionsFacade"
-            }
+            },
+            "dont-discover": [
+                "casbin/laravel-authz"
+            ]
         }
     }
 }
