@@ -24,7 +24,18 @@ class RbacDomainPermissionsServiceProvider extends ServiceProvider
         UserRolesRepositoryInterface::class => UserRolesRepository::class,
     ];
 
-    public function register()
+    public function boot(): void
+    {
+        $this->publishes([
+            __DIR__.'/../../config/lauthz.php' => config_path('lauthz.php'),
+            __DIR__.'/../../config/lauthz-rbac-model.conf' => config_path('lauthz-rbac-model.conf'),
+            __DIR__.'/../../config/rbacDomainPermissions.php' => config_path('rbacDomainPermissions.php'),
+        ]);
+
+        $this->loadMigrationsFrom(__DIR__.'/Database/Migrations');
+    }
+
+    public function register(): void
     {
         $this->app->when(ConstantsObjectsQueryRepository::class)
             ->needs('$objectsClasses')
@@ -42,7 +53,7 @@ class RbacDomainPermissionsServiceProvider extends ServiceProvider
 
     private function getObjects(): array
     {
-        $objectClasses = Config::get('RbacDomainPermissions.objects');
+        $objectClasses = Config::get('rbacDomainPermissions.objects');
 
         if ($this->app->environment('testing')) {
             $objectClasses = array_merge(
