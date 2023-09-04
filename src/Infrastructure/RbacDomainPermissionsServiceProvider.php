@@ -51,6 +51,6 @@ class RbacDomainPermissionsServiceProvider extends ServiceProvider
             );
         }
 
-        return $objectClasses;
+        return is_null($objectClasses) ? [] : $objectClasses;
     }
 }
