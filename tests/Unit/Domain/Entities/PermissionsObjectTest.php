@@ -1,6 +1,6 @@
 <?php
 
-namespace Getorbit\RbacDomainPermissions\Tests\Unit\Domain\ValueObjects;
+namespace Getorbit\RbacDomainPermissions\Tests\Unit\Domain\Entities;
 
 use Getorbit\RbacDomainPermissions\Domain\Exceptions\InvalidAllowedAction;
 use Getorbit\RbacDomainPermissions\Domain\ValueObjects\Action;

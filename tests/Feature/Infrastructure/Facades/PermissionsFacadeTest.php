@@ -1,6 +1,6 @@
 <?php
 
-namespace Getorbit\RbacDomainPermissions\Tests\Infrastructure\Facades;
+namespace Getorbit\RbacDomainPermissions\Tests\Feature\Infrastructure\Facades;
 
 use Getorbit\RbacDomainPermissions\Domain\Exceptions\InvalidActionForObject;
 use Getorbit\RbacDomainPermissions\Domain\Exceptions\ObjectNotFound;
