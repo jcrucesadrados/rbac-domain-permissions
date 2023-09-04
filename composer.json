@@ -65,7 +65,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Getorbit\\RbacDomainPermissions\\Infrastructure\\Facades\\RbacDomainPermissionsServiceProvider"
+                "Getorbit\\RbacDomainPermissions\\Infrastructure\\RbacDomainPermissionsServiceProvider"
             ],
             "aliases": {
                 "PermissionsFacade": "Getorbit\\RbacDomainPermissions\\Infrastructure\\Facades\\PermissionsFacade"
