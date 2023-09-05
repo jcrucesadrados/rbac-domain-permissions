@@ -1,11 +1,5 @@
 {
     "name": "getorbit/rbac-domain-permissions",
-    "autoload": {
-        "psr-4": {
-            "Getorbit\\RbacDomainPermissions\\": "src/",
-            "Getorbit\\RbacDomainPermissions\\Tests\\": "tests/"
-        }
-    },
     "description": "This is a custom package to manage permissions in the Orbit System based on a RBAC with domain system",
     "type": "library",
     "license": "MIT",
@@ -41,6 +35,19 @@
         "phpstan/phpstan-mockery": "^1.1",
         "laravel/pint": "^1.11"
     },
+    "autoload": {
+        "psr-4": {
+            "Getorbit\\RbacDomainPermissions\\": "src/",
+            "Getorbit\\RbacDomainPermissions\\Tests\\": "tests/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Workbench\\App\\": "workbench/app/",
+            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
+            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+        }
+    },
     "scripts": {
         "php-stan": "vendor/bin/phpstan analyse --memory-limit=1G",
         "unit-test": "vendor/bin/phpunit --testsuite=Unit",
@@ -55,11 +62,17 @@
         ],
         "test": "@php vendor/bin/phpunit"
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Workbench\\App\\": "workbench/app/",
-            "Workbench\\Database\\Factories\\": "workbench/database/factories/",
-            "Workbench\\Database\\Seeders\\": "workbench/database/seeders/"
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Getorbit\\RbacDomainPermissions\\Infrastructure\\RbacDomainPermissionsServiceProvider"
+            ],
+            "aliases": {
+                "PermissionsFacade": "Getorbit\\RbacDomainPermissions\\Infrastructure\\Facades\\PermissionsFacade"
+            },
+            "dont-discover": [
+                "casbin/laravel-authz"
+            ]
         }
     }
 }
